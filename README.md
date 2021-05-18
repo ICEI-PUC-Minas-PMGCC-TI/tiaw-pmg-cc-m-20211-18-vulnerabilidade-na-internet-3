@@ -1,6 +1,6 @@
-# Projeto WHIP(World Human Identity Protector)
+# Projeto WHIP (World Human Identity Protector)
 
-O objetivo deste projeto é construir uma ferramenta virtual capaz de aliviar ou neutralizar a necessidade do usuário de conscientemente de administrar suas credenciais de acesso, através da manutenção da integridade e do uso destas ao concentrá-las em uma plataforma única especializada nessas funções. Isso tendo em vista um objetivo maior de promover um aumento na segurança pessoal dos usuários no acesso a internet. 
+  O objetivo deste projeto é construir uma ferramenta virtual capaz de aliviar ou neutralizar a necessidade do usuário de conscientemente administrar suas credenciais de acesso no ambiente da internet. Isso será feito através da manutenção da integridade e do gerenciamento do uso destas credenciais ao concentrá-las em uma plataforma única especializada nessas funções. Tudo isso, tendo em vista um objetivo maior de promover um aumento na segurança pessoal dos usuários no acesso a internet.
 
 ## Alunos integrantes da equipe
 
@@ -22,4 +22,4 @@ O objetivo deste projeto é construir uma ferramenta virtual capaz de aliviar ou
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+  Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
