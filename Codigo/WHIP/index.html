@@ -116,6 +116,7 @@
     <script src="assets/js/bs-init.js"></script>
     <script>
         function getPassword(){
+            event.preventDefault();
             var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ!@#$%^&*()+?><:{}[]";
             var passwordLength = 16;
             var password = "";
