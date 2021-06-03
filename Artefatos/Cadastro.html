@@ -1,37 +1,141 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="login.js"></script>
+    
+    <style>
+        body {
+            color: white;
+            font: 87.5%/1.5em 'Open Sans', sans-serif;
+        }
+        .login {
+            margin: 50px auto;
+            width: 320px;
+        }
+        .login form {
+            margin: auto;
+            padding: 22px 22px 22px 22px;
+            width: 100%;
+            background: #1e2833;
+        }
+        .login form input[type="email"] {
+            background-color: #3b4148;
+            border-radius: 0px 3px 3px 0px;
+            color: #a9a9a9;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 90%;
+            height: 50px;
+        }
+        .login form input[type="name"] {
+            background-color: #3b4148;
+            border-radius: 0px 3px 3px 0px;
+            color: #a9a9a9;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 90%;
+            height: 50px;
+        }
+        .login form input[type="password"] {
+            background-color: #3b4148;
+            border-radius: 0px 3px 3px 0px;
+            color: #a9a9a9;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 90%;
+            height: 50px;
+        }
+        .login form input[type="submit"] {
+            background: #214a80;
+            border: 0;
+            width: 100%;
+            height: 40px;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+        }
+        #login form input[type="submit"]:hover {
+            background: #16aa56;
+        }
+        .js-focus-visible {
+            background-color: #343a40;
+        }
+        .background {
+            background-color: #343a40;
+        }
+        .helper-text {
+            margin-bottom: 50px;
+            margin-top: 0px;
+            padding-left: 18px;
+        }
+        .register {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body class="background">
-<div class="login">
-    <form name='form-login'>
+    <div class="login">
+        <form name='form-login'>
 
-        <h1 class="register">Cadastro</h1>
+            <h1 class="register">Cadastro</h1>
 
-        <label for="pw">Usuario</label>
-        <input type="name" id= "user" placeholder="Nome de usuario" required> 
+            <label for="pw">Usuario</label>
+            <input type="name" id="user" placeholder="Nome de usuario" required>
 
-        <label for="name">Email</label>
-        <input type="email" id="email" placeholder="Email" required>
+            <label for="name">Email</label>
+            <input type="email" id="email" placeholder="Email" required>
 
-        <label for="pw">Senha</label>
-        <input type="password" id= "pw" placeholder="Senha" required>
+            <label for="pw">Senha</label>
+            <input type="password" id="pw" placeholder="Senha" required>
 
 
 
-        <ul class="helper-text">
-            <li class="length">Ao menos 8 caracteres.</li>
-            <li class="lowercase">Ao menos uma letra maiuscula.</li>
-            <li class="special">Ao menos um caractere especial.</li>
-        </ul>
-        <input id="rgstr_btn" type="submit" value="Register" onclick="cadastro()">
+            <ul class="helper-text">
+                <li class="length">Ao menos 8 caracteres.</li>
+                <li class="lowercase">Ao menos uma letra maiuscula.</li>
+                <li class="special">Ao menos um caractere especial.</li>
+            </ul>
+            <input id="rgstr_btn" type="submit" value="Register" onclick="cadastro()">
 
-    </form>
-</div>
+            <script>
+
+                function cadastro() {
+
+                    var user = document.getElementById('user');
+                    var email = document.getElementById('email');
+                    var pw = document.getElementById('pw');
+
+                    var letraMaiuscula = /[A-Z]/g;
+                    var caracteresEspeciais = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
+                    var arroba = /[@]/;
+
+                    if (email.value.length == 0) {
+                        alert('Preencha o campo do email');
+                    } else if (pw.value.length == 0) {
+                        alert('Preencha o campo da senha');
+                    } else if (email.value.length == 0 && pw.value.length == 0) {
+                        alert('Preencha os campos do email e senha');
+                    } else if (!email.value.match(arroba)) {
+                        alert('Formato do email incorreto');
+                    } else if (pw.value.length < 8) {
+                        alert('Minimo de 8 caracteres');
+                    } else if (!pw.value.match(letraMaiuscula)) {
+                        alert('Adicione ao menos 1 letra maiuscula');
+                    } else if (!pw.value.match(caracteresEspeciais)) {
+                        alert('Adicione ao menos 1 caractere especial');
+                    } else {
+                        localStorage.setItem('email', email.value);
+                        localStorage.setItem('user', user.value);
+                        localStorage.setItem('pw', pw.value);
+                        alert('Sua conta foi craida com sucesso!');
+                    }
+                }
+            </script>
+        </form>
+    </div>
 </body>
+
 </html>
