@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+</head>
+<body class="background">
+<div class="login">
+    <form name='form-login'>
+
+        <h1 class="register">Cadastro</h1>
+
+        <label for="pw">Usuario</label>
+        <input type="name" id= "user" placeholder="Nome de usuario" required> 
+
+        <label for="name">Email</label>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <label for="pw">Senha</label>
+        <input type="password" id= "pw" placeholder="Senha" required>
+
+
+
+        <ul class="helper-text">
+            <li class="length">Ao menos 8 caracteres.</li>
+            <li class="lowercase">Ao menos uma letra maiuscula.</li>
+            <li class="special">Ao menos um caractere especial.</li>
+        </ul>
+        <input id="rgstr_btn" type="submit" value="Register" onclick="cadastro()">
+
+    </form>
+</div>
+</body>
+</html>
