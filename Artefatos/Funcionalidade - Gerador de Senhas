@@ -1,0 +1,29 @@
+ <section>
+        <div class="container">
+            <section class="newsletter-subscribe">
+                <div class="container">
+                    <div class="intro">
+                        <h2 class="text-center"><strong>Gere a sua senha instantaneamente</strong></h2>
+                        <p class="text-center">Clique no botão gerar para gerar uma senha aleatória.</p>
+                    </div>
+                   <form class="form-inline" method="post">
+                        <div class="form-group"><input class="form-control" id="password" type="text" name="nsenha" placeholder="Gerar Senha" readonly=""></div>
+                        <div class="form-group"><button class="btn btn-primary" type="submit" onclick="getPassword()">Gerar</button></div>
+                    </form>
+                </div>
+            </section>
+        </div>
+</section>
+<script>
+        function getPassword(){
+            event.preventDefault();
+            var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ!@#$%^&*()+?><:{}[]";
+            var passwordLength = 16;
+            var password = " ";
+            for (var i = 0; i < passwordLength; i++) {
+                var randomNumber = Math.floor(Math.random() * chars.length);
+                password += chars.substring(randomNumber, randomNumber + 1);
+            }
+        document.getElementById('password').value = password
+        }
+</script>
