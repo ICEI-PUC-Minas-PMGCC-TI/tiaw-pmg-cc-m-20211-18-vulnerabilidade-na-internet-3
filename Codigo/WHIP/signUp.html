@@ -3,6 +3,77 @@
 
 <head>
     <meta charset="utf-8">
+    <style> 
+        body {
+            color: white;
+            font: 87.5%/1.5em 'Open Sans', sans-serif;
+            background-color:#343a40;
+        }
+        .login {
+            margin: 50px auto;
+            width: 320px;
+        }
+        .login form {
+            margin: auto;
+            padding: 22px 22px 22px 22px;
+            width: 100%;
+            background: #1e2833;
+        }
+        .login form input[type="email"] {
+            background-color: #3b4148;
+            border-radius: 0px 3px 3px 0px;
+            color: #a9a9a9;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 90%;
+            height: 50px;
+        }
+        .login form input[type="name"] {
+            background-color: #3b4148;
+            border-radius: 0px 3px 3px 0px;
+            color: #a9a9a9;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 90%;
+            height: 50px;
+        }
+        .login form input[type="password"] {
+            background-color: #3b4148;
+            border-radius: 0px 3px 3px 0px;
+            color: #a9a9a9;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 90%;
+            height: 50px;
+        }
+        .login form input[type="submit"] {
+            background: #214a80;
+            border: 0;
+            width: 100%;
+            height: 40px;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+        }
+        #login form input[type="submit"]:hover {
+            background: #16aa56;
+        }
+        .js-focus-visible {
+            background-color: #343a40;
+        }
+        .background {
+            background-color: #343a40;
+        }
+        .helper-text {
+            margin-bottom: 50px;
+            margin-top: 0px;
+            padding-left: 18px;
+        }
+        .register {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -44,21 +115,68 @@
     </nav>
     <section></section>
     <section></section>
-    <section style="background: #343a40;">
-        <div class="container">
-            <section class="login-clean" style="background: #343a40;">
-                <section class="login-dark" style="background: #343a40;border-color: #343a40;height: 400px;">
-                    <form method="post" style="height: 520px;width: 320px;">
-                        <h2 class="sr-only">Login Form</h2>
-                        <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Usuário"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-                        <div class="form-group"><input type="password" class="form-control" name="password" placeholder="Senha" /><input type="password" class="form-control" name="password" placeholder="Repita a sua senha" /></div>
-                        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div>
-                    </form>
-                </section>
-            </section>
-        </div>
-    </section>
+    <body class="background">
+    <div class="login">
+        <form name='form-login'>
+
+            <h1 class="register">Cadastro</h1>
+
+            <label for="pw">Usuario</label>
+            <input type="name" id="user" placeholder="Nome de usuario" required>
+
+            <label for="name">Email</label>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <label for="pw">Senha</label>
+            <input type="password" id="pw" placeholder="Senha" required>
+
+
+
+            <ul class="helper-text">
+                <li class="length">Ao menos 8 caracteres.</li>
+                <li class="lowercase">Ao menos uma letra maiuscula.</li>
+                <li class="special">Ao menos um caractere especial.</li>
+            </ul>
+            <input id="rgstr_btn" type="submit" value="Register" onclick="cadastro()">
+
+            <script>
+
+                function cadastro() {
+
+                    var user = document.getElementById('user');
+                    var email = document.getElementById('email');
+                    var pw = document.getElementById('pw');
+
+                    var letraMaiuscula = /[A-Z]/g;
+                    var caracteresEspeciais = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
+                    var arroba = /[@]/;
+
+                    if (email.value.length == 0) {
+                        alert('Preencha o campo do email');
+                    } else if (pw.value.length == 0) {
+                        alert('Preencha o campo da senha');
+                    } else if (email.value.length == 0 && pw.value.length == 0) {
+                        alert('Preencha os campos do email e senha');
+                    } else if (!email.value.match(arroba)) {
+                        alert('Formato do email incorreto');
+                    } else if (pw.value.length < 8) {
+                        alert('Minimo de 8 caracteres');
+                    } else if (!pw.value.match(letraMaiuscula)) {
+                        alert('Adicione ao menos 1 letra maiuscula');
+                    } else if (!pw.value.match(caracteresEspeciais)) {
+                        alert('Adicione ao menos 1 caractere especial');
+                    } else {
+                        localStorage.setItem('email', email.value);
+                        localStorage.setItem('user', user.value);
+                        localStorage.setItem('pw', pw.value);
+                        alert('Sua conta foi craida com sucesso!');
+                    }
+                }
+
+            </script>
+        </form>
+    </div>
+</body>
     <footer class="py-5 bg-black">
         <div class="container">
             <p class="text-center text-white m-0 small">Copyright&nbsp;© WHIP 2021 - ICEI - PUC Minas</p>
