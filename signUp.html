@@ -3,82 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <style> 
-        body {
-            color: white;
-            font: 87.5%/1.5em 'Open Sans', sans-serif;
-            background-color:#343a40;
-        }
-        .login {
-            margin: 50px auto;
-            width: 320px;
-        }
-        .login form {
-            margin: auto;
-            padding: 22px 22px 22px 22px;
-            width: 100%;
-            background: #1e2833;
-        }
-        .login form input[type="email"] {
-            background-color: #3b4148;
-            border-radius: 0px 3px 3px 0px;
-            color: #a9a9a9;
-            margin-bottom: 1em;
-            padding: 0 16px;
-            width: 90%;
-            height: 50px;
-        }
-        .login form input[type="name"] {
-            background-color: #3b4148;
-            border-radius: 0px 3px 3px 0px;
-            color: #a9a9a9;
-            margin-bottom: 1em;
-            padding: 0 16px;
-            width: 90%;
-            height: 50px;
-        }
-        .login form input[type="password"] {
-            background-color: #3b4148;
-            border-radius: 0px 3px 3px 0px;
-            color: #a9a9a9;
-            margin-bottom: 1em;
-            padding: 0 16px;
-            width: 90%;
-            height: 50px;
-        }
-        .login form input[type="submit"] {
-            background: #214a80;
-            border: 0;
-            width: 100%;
-            height: 40px;
-            border-radius: 3px;
-            color: white;
-            cursor: pointer;
-        }
-        #login form input[type="submit"]:hover {
-            background: #16aa56;
-        }
-        .js-focus-visible {
-            background-color: #343a40;
-        }
-        .background {
-            background-color: #343a40;
-        }
-        .helper-text {
-            margin-bottom: 50px;
-            margin-top: 0px;
-            padding-left: 18px;
-        }
-        .register {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
@@ -87,18 +17,24 @@
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark navbar-custom" style="border-color: #ffffff;background: #343a40;">
-        <div class="container"><a class="navbar-brand" href="index.html">WHIP</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive-1"><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark navbar-custom"
+        style="border-color: #212529;background: #343a40;">
+        <div class="container"><a class="navbar-brand" href="index.html">WHIP</a><button data-toggle="collapse"
+                class="navbar-toggler" data-target="#navbarResponsive-1"><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive-1">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"></li>
                 </ul>
             </div>
-            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom" style="color: #ffffff;">
-                <div class="container"><a class="navbar-brand" href="index.html">WHIP</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom" style="color: #212529;">
+                <div class="container"><a class="navbar-brand" href="index.html">WHIP</a><button data-toggle="collapse"
+                        class="navbar-toggler" data-target="#navbarResponsive"><span
+                            class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="saibaMais.html">Saiba Mais</a></li>
@@ -115,32 +51,37 @@
     </nav>
     <section></section>
     <section></section>
-    <body class="background">
-    <div class="login">
-        <form name='form-login'>
-
-            <h1 class="register">Cadastro</h1>
-
-            <label for="pw">Usuario</label>
-            <input type="name" id="user" placeholder="Nome de usuario" required>
-
-            <label for="name">Email</label>
-            <input type="email" id="email" placeholder="Email" required>
-
-            <label for="pw">Senha</label>
-            <input type="password" id="pw" placeholder="Senha" required>
-
-
-
-            <ul class="helper-text">
-                <li class="length">Ao menos 8 caracteres.</li>
-                <li class="lowercase">Ao menos uma letra maiuscula.</li>
-                <li class="special">Ao menos um caractere especial.</li>
-            </ul>
-            <input id="rgstr_btn" type="submit" value="Cadastrar" onclick="cadastro()">
-
+    <section style="background: #343a40;">
+        <div class="container">
+            <section class="login-clean" style="background: #343a40;">
+                <section class="login-dark" style="background: #343a40;border-color: #343a40;height: 400px;">
+                    <form method="post" style="height: 520px;width: 320px;">
+                        <h2 class="sr-only">Login Form</h2>
+                        <div class="illustration">
+                            <i class="icon ion-ios-locked-outline"></i>
+                        </div>
+                        <div class="form-group">
+                        <!-- <input class="form-control" type="email" name="email" placeholder="Usuário"> -->
+                            <input class="form-control" type="email" name="email" id="user" placeholder="Usuário" required>
+                          <!-- <input class="form-control" type="email" name="email" placeholder="Email"> -->
+                            <input class="form-control" type="email" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- <input type="password" class="form-control" name="password"placeholder="Senha"/> -->
+                            <input type="password" class="form-control" name="password" id="pw" placeholder="Senha" required>
+                        </div>
+                        <ul class="helper-text">
+                            <li class="length">Ao menos 8 caracteres.</li>
+                            <li class="lowercase">Ao menos uma letra maiuscula.</li>
+                            <li class="special">Ao menos um caractere especial.</li>
+                        </ul>
+                        <div class="form-group"><button class="btn btn-primary btn-block" type="submit"value="Register" onclick="cadastro()">Cadastrar</button>
+                            <!--<input id="rgstr_btn" type="submit" value="Register" onclick="cadastro()"> -->
+                        </div>
+                    </form>
+                </section>
+            </section>
             <script>
-
                 function cadastro() {
 
                     var user = document.getElementById('user');
@@ -172,11 +113,9 @@
                         alert('Sua conta foi craida com sucesso!');
                     }
                 }
-
             </script>
-        </form>
-    </div>
-</body>
+        </div>
+    </section>
     <footer class="py-5 bg-black">
         <div class="container">
             <p class="text-center text-white m-0 small">Copyright&nbsp;© WHIP 2021 - ICEI - PUC Minas</p>
