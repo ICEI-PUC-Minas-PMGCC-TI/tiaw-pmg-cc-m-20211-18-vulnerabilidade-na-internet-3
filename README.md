@@ -10,7 +10,6 @@
 * João Augusto Dos Santos Silva
 * Leandro Lourenço Lemos
 * Leonardo Oliveira Bastos
-* Pedro Vieira Mascarenhas Frois
 
 ## Professores responsáveis
 
