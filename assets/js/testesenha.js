@@ -19,6 +19,7 @@ function testesenha() {
     }else if (!senha.value.match(CaracEsp)) {
         alert('Senha Mediana!!!! \nDica:\nAdicione ao menos um caractere especial');
     } else {
+        localStorage.setItem('db', senha.value);
         alert('Esta e uma senha Forte');
     }
 }
