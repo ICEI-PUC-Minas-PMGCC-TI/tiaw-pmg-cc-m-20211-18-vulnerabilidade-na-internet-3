@@ -8,8 +8,7 @@ function lelogin (){
     else {
         objsite = { 
             logins: [
-                         {site:"Google", user:"Leo", senha:"leo42"},
-                         {site:"Amazon", user:"Leonardo", senha:"leo2"}
+                         {site:"", user:"", senha:""}
             ]
         }
 
