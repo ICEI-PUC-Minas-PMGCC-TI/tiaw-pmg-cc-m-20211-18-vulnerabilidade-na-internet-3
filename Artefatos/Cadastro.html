@@ -111,6 +111,9 @@
                         localStorage.setItem('user', user.value);
                         localStorage.setItem('pw', pw.value);
                         alert('Sua conta foi craida com sucesso!');
+                        setTimeout(function() {
+                             window.location.href = "login.html";
+                        }, 4000);
                     }
                 }
             </script>
