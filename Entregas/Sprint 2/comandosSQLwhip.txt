@@ -1,0 +1,17 @@
+USE db_Whip
+
+CREATE TABLE tbl_Site
+	( Login VARCHAR PRIMARY KEY (40) NOT NULL, 
+	  Senha VARCHAR(45) NOT NULL, 
+	  Possui VARCHAR FOREIGN KEY(30)
+	 )
+
+CREATE TABLE tbl_User
+	( Nome de Usuário VARCHAR PRIMARY KEY (30) NOT NULL,
+	  Armazena VARCHAR(40))
+
+CREATE TABLE tbl_Registro
+	( Site VARCHAR PRIMARY KEY(100), 
+	  Descrição VARCHAT(100), 
+	  Problema VARCHAR(100))
+
